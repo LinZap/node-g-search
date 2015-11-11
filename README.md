@@ -59,7 +59,11 @@ var p = db.connect({
 })
 
 ```
-
+  
+   
+  
+  
+  
 ## Pg Client API
 
 ### db.connect(option)
@@ -71,15 +75,18 @@ var p = db.connect({
 	dbname: 'dbname'
 }
 ```
-
+  
 ### db.query(sql [,params]) 
 use [Prepared Statements](https://github.com/brianc/node-postgres/wiki/Prepared-Statements)   
 Delimiter`$1`,`$2`,`?` 
 return  Promise<[result](https://github.com/brianc/node-postgres/wiki/Query#result-object)> object
-
+  
 ```sql
 	 select * from table where id=?
 ```
-
+  
+### db.queryIgnore(sql [,params [,retry]]) 
+  
+ 
 ### db.close()
 
