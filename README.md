@@ -8,7 +8,7 @@ Node Google Search Crawler
 ```js
 var g = require('./index.js');
 
-g.searchAll(keyword,2)
+g.search("bon jovi")
 .then(function(d){
 	
 	if(d.data)
