@@ -1,0 +1,30 @@
+{
+  "name": "node-g-search",
+  "version": "1.0.0",
+  "description": "google search crawler",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "pg": "^4.4.3",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinZap/node-g-search.git"
+  },
+  "keywords": [
+    "google",
+    "search",
+    "crawler"
+  ],
+  "author": "Zap",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LinZap/node-g-search/issues"
+  },
+  "homepage": "https://github.com/LinZap/node-g-search#readme"
+}
