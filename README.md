@@ -50,12 +50,11 @@ var p = db.connect({
 	dbname: 'dbname'
 })
 
-.then(function(){
-	return db.query('select ?+? as res',[1,2])
-	.then(function(res){
-		console.log(res.rows[0].res);
-		return res.rows[0].res;
-	})
+.then(function(res){
+	console.log(res.rows[0].ans);
+	return res.rows[0].ans;
+},function(err){
+	console.log('%s',err);
 })
 
 ```
