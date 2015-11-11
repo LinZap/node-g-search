@@ -50,11 +50,16 @@ var p = db.connect({
 	dbname: 'dbname'
 })
 
-.then(function(res){
-	console.log(res.rows[0].ans);
-	return res.rows[0].ans;
-},function(err){
-	console.log('%s',err);
+.then(function(client){
+
+	return db.query('select ?::int+?::int as ans',[10,20])
+	.then(function(res){
+		console.log(res.rows[0].ans);
+		return res.rows[0].ans;
+	},function(err){
+		console.log('%s',err);
+	})
+	
 })
 
 ```
