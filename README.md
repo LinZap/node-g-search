@@ -28,5 +28,8 @@ g.searchAll(keyword,2)
 
 ## API
 
-## g.search(q[,page[,retry]])
+### g.search(q[,page[,retry]])
 
+### g.searchAll(q[,retry])
+
+### g.pg()
