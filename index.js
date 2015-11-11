@@ -110,6 +110,6 @@ module.exports = {
 		};
 	},
 
-	pg: function(){ return require('./node-pg-promise'); }
+	pg: function(){ return require('./lib/node-pg-promise'); }
 
 };
