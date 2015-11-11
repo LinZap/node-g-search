@@ -41,7 +41,7 @@ and complete access layer to node-postgres via Promises/A+.
 
 ```js
 var g = require('node-g-search'),
-    db = g.pg;
+    db = g.pg();
 
 var p = db.connect({
 	user:'user',
@@ -78,7 +78,7 @@ var p = db.connect({
   
 ### db.query(sql [,params]) 
 use [Prepared Statements](https://github.com/brianc/node-postgres/wiki/Prepared-Statements)   
-Delimiter`$1`,`$2`,`?` 
+`$1`,`$2`or`?` 
 return  Promise<[result](https://github.com/brianc/node-postgres/wiki/Query#result-object)> object
   
 ```sql
