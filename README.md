@@ -6,7 +6,7 @@ Node Google Search Crawler
 
 ## Introduction
 ```js
-var g = require('./index.js');
+var g = require('node-g-search');
 
 g.search("bon jovi")
 .then(function(d){
@@ -26,7 +26,7 @@ g.search("bon jovi")
 	npm install --save node-g-search
 
 
-## API
+## Search API
 
 ### g.search(q[,page[,retry]])
 
@@ -40,7 +40,7 @@ g.search("bon jovi")
 and complete access layer to node-postgres via Promises/A+.
 
 ```js
-var g = require('./index.js'),
+var g = require('node-g-search'),
     db = g.pg;
 
 var p = db.connect({
@@ -60,4 +60,26 @@ var p = db.connect({
 
 ```
 
+## Pg Client API
+
+### db.connect(option)
+```js
+{
+	user:'user',
+	password: 'pwd',
+	host: 'localhost',
+	dbname: 'dbname'
+}
+```
+
+### db.query(sql [,params]) 
+use [Prepared Statements](https://github.com/brianc/node-postgres/wiki/Prepared-Statements)   
+Delimiter`$1`,`$2`,`?` 
+return  Promise<[result](https://github.com/brianc/node-postgres/wiki/Query#result-object)> object
+
+```sql
+	 select * from table where id=?
+```
+
+### db.close()
 
