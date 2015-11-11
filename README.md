@@ -33,3 +33,31 @@ g.search("bon jovi")
 ### g.searchAll(q[,retry])
 
 ### g.pg()
+ 
+ 
+## Connect to PostgreSQL
+[node-postgres](https://github.com/brianc/node-postgres) built-in
+and complete access layer to node-postgres via Promises/A+.
+
+```js
+var g = require('./index.js'),
+    db = g.pg;
+
+var p = db.connect({
+	user:'user',
+	password: 'pwd',
+	host: 'localhost',
+	dbname: 'dbname'
+})
+
+.then(function(){
+	return db.query('select ?+? as res',[1,2])
+	.then(function(res){
+		console.log(res.rows[0].res);
+		return res.rows[0].res;
+	})
+})
+
+```
+
+
