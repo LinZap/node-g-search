@@ -93,4 +93,4 @@ return  Promise<[result](https://github.com/brianc/node-postgres/wiki/Query#resu
   
  
 ### db.close()
-
+## License BSD
