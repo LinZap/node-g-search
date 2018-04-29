@@ -95,13 +95,15 @@ module.exports = {
 
 		var a = $('.r').children('a'),
 			t = $('.st'),
+			k = t.find('.f');
 			p = $('#nav').find('td').not('.navend').length;
 			d = [];
 		a.each(function(i,el){
 			var href = $(el).attr('href'),
 				tit = $(el).text(),
 				des = t.eq(i).text();
-			d.push({ title: tit, href: href, des: des });
+				date = k ? k.eq(i).text() : null;
+			d.push({ title: tit, href: href, des: des, date: date });
 		});
 
 		return {
