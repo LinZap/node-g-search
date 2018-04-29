@@ -102,7 +102,7 @@ module.exports = {
 			var href = $(el).attr('href'),
 				tit = $(el).text(),
 				des = t.eq(i).text();
-				date = k.eq(i).text();
+				date = k ? k.eq(i).text() : null;
 			d.push({ title: tit, href: href, des: des, date: date });
 		});
 
